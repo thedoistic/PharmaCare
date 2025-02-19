@@ -8,10 +8,11 @@ import Intro from "./components/customer/home/Intro/Intro"
 import HomePage from "./pages/customer/HomePage"
 import Footer from "./components/customer/Footer/Footer"
 import Header from "./components/customer/header/Header"
+import Sidebar from "./components/admin/sidebar/sidebar"
 
 function App() {
   return (
-    <AppRoute />
+    <Sidebar />
   )
 }
 
