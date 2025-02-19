@@ -1,0 +1,121 @@
+.zigzag-section {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff, #f5f5f5);
+  padding: 6rem 1rem 2rem;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+.zigzag-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 4rem;
+}
+
+.zigzag-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zigzag-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.left-image .zigzag-content {
+  grid-template-areas: "image text";
+}
+.right-image .zigzag-content {
+  grid-template-areas: "text image";
+}
+
+.zigzag-image-container {
+  grid-area: image;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.zigzag-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(0, 121, 107, 0.3));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.zigzag-image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.zigzag-text-container {
+  grid-area: text;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.zigzag-title {
+  font-size: 2.5rem;
+  color: #00796b;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.zigzag-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.zigzag-cta {
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  background: #00796b;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.zigzag-cta:hover {
+  background: #005f56;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .zigzag-content {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "text";
+  }
+  .zigzag-text-container {
+    padding: 1.5rem;
+  }
+}

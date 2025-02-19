@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f0f8ff;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f8ff, #e0f7ff);
+}
+
+.signup-card {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  width: 100%;
+}
+
+.welcome-section {
+  background: #00796b;
+  color: #fff;
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #80cbc4;
+}
+
+.welcome-message {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  margin: 0;
+  text-align: center;
+}
+
+.subtext {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.signup-form {
+  flex: 1;
+  padding: 2rem;
+}
+
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.5rem;
+  transition: border-color 0.3s;
+  position: relative;
+}
+
+.form-group:focus-within {
+  border-color: #00796b;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  color: #00796b;
+  font-size: 1.2rem;
+}
+
+.form-group input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #00796b;
+  font-size: 1.2rem;
+}
+
+.signup-form button {
+  width: 100%;
+  background-color: #00796b;
+  border: none;
+  color: #fff;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-form button:hover {
+  background-color: #004d40;
+}
+
+.login-redirect {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.login-redirect a {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-redirect a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .signup-card {
+    flex-direction: column;
+  }
+  
+  .welcome-section,
+  .signup-form {
+    padding: 1.5rem;
+  }
+}
