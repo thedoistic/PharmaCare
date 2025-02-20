@@ -1,0 +1,187 @@
+:root {
+    --sidebar-width: 300px;
+    --bg-gradient: #27445D;
+    --accent-color: #000000;
+    --text-color: #f1f1f1;
+    --hover-bg: rgba(255, 255, 255, 0.1);
+    --card-bg: rgba(255, 255, 255, 0.08);
+    --btn-bg: var(--accent-color);
+    --btn-hover-bg: #497D74;
+    --transition-speed: 0.3s;
+    --icon-size: 1.5rem;
+  }
+  
+.sideBar {
+    width: var(--sidebar-width);
+    min-height: 100vh;
+    background: var(--bg-gradient);
+    color: var(--text-color);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    transition: width var(--transition-speed) ease;
+}
+  
+.sideBar:hover {
+    width: calc(var(--sidebar-width) + 20px);
+}
+  
+.menuDiv,
+.settingsDiv {
+    margin-bottom: 30px;
+}
+  
+.divTitle {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #a0a0a0;
+}
+  
+.menuLists {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.listItem {
+    margin-bottom: 15px;
+}
+  
+.menuLink {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+    position: relative;
+}
+  
+.menuLink:hover {
+    background: var(--hover-bg);
+    transform: translateX(5px);
+}
+  
+.menuLink .icon {
+    font-size: var(--icon-size);
+    margin-right: 12px;
+    transition: transform var(--transition-speed);
+}
+  
+.menuLink:hover .icon {
+    transform: rotate(15deg);
+}
+  
+.smallText {
+    font-size: 1.2rem;
+}
+  
+.sideBarCard {
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+  
+.sideBarCard .icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+  
+.sideBarCard .cardContent h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+}
+  
+.sideBarCard .cardContent p {
+    font-size: 0.9rem;
+    color: #d1d1d1;
+    margin-bottom: 15px;
+}
+  
+.sideBarCard .btn {
+    background: var(--btn-bg);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+}
+  
+.sideBarCard .btn:hover {
+    background: var(--btn-hover-bg);
+    transform: scale(1.05);
+}
+  
+.circle1,
+.circle2 {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+ }
+  
+.circle1 {
+    width: 80px;
+    height: 80px;
+    bottom: -20px;
+    right: -20px;
+    animation: pulse 4s infinite;
+}
+  
+.circle2 {
+    width: 40px;
+    height: 40px;
+    top: -10px;
+    left: -10px;
+}
+  
+@keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.15;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sideBar {
+      width: 240px;
+      padding: 20px;
+    }
+    .sideBar:hover {
+      width: 240px;
+    }
+    .divTitle {
+      font-size: 0.8rem;
+    }
+    .menuLink {
+      padding: 8px 12px;
+    }
+    .smallText {
+      font-size: 0.9rem;
+    }
+    .sideBarCard {
+      padding: 15px;
+    }
+}
+  
