@@ -1,2 +1,2 @@
 # PharmaCare
-E-Pharmacy Project 
+E-Pharmacy Project (REACT & JS)
