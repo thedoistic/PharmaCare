@@ -9,10 +9,11 @@ import HomePage from "./pages/customer/HomePage"
 import Footer from "./components/customer/Footer/Footer"
 import Header from "./components/customer/header/Header"
 import Sidebar from "./components/admin/sidebar/sidebar"
-
+import Inventory from "./components/admin/Inventory/Inventory"
+import AdminIndex from "./pages/admin/AdminIndex"
 function App() {
   return (
-    <Sidebar />
+    <AdminIndex />
   )
 }
 

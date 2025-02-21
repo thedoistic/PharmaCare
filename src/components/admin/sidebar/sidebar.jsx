@@ -69,15 +69,6 @@ const Sidebar = () => {
                 window.location.reload();
               }}
               className="buttonStyle"
-              style={{
-                background: "none",
-                border: "none",
-                color: "var(--accent-color)",
-                cursor: "pointer",
-                fontSize: "1.5rem",
-                display: "flex",
-                alignItems: "center",
-              }}
             >
               <MdOutlineLogin className="icon" />
               <span>Log Out</span>
