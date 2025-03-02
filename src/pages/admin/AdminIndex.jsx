@@ -1,15 +1,32 @@
 import './AdminIndex.css'
 import Body from '../../components/admin/Body/Body'
-import Sidebar from "../../components/admin/sidebar/sidebar";
+import Sidebar from "../../components/admin/sidebar/sidebar"
+import { Box } from '@mui/material'
 import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Outlet } from 'react-router-dom'
 
 const AdminIndex = () => {
     return (
-        <div className="adminIndex">
+        <Box
+            sx={{
+                display: 'flex',
+                width: '100%',
+                height: '100vh',
+                bgcolor: 'background.default'
+            }}
+        >
             <Sidebar />
-            <Body />
-        </div>
+            <Box
+                component="main"
+                sx={{
+                    flexGrow: 1,
+                    p: 3,
+                    overflow: 'auto'
+                }}
+            >
+                <Outlet />
+            </Box>
+        </Box>
     )
 }
 
